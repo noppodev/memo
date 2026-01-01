@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- PWA Settings -->
+    <link rel='manifest' href='manifest.webmanifest'>
+    <meta name='theme-color' content='#F2F2F7'>
+    <link rel='apple-touch-icon' href='icon-512.png'>
+    <!-- /PWA Settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NoppoMemo</title>
@@ -39,5 +44,14 @@
 </head>
 <body class="antialiased">
     <div id="root"></div>
-</body>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+    <!-- /Service Worker Registration --></body>
 </html>

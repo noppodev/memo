@@ -2,7 +2,7 @@ const CACHE_NAME = "noppo-memo-v1";
 const ASSETS = [
   "./",
   "./index.html",
-  "./manifest.json",
+  "./manifest.webmanifest",
   "./icon-512.png"
 ];
 
@@ -21,4 +21,3 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-
